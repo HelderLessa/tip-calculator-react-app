@@ -1,7 +1,7 @@
 export default function Service({ serviceValue, setServiceValue, children }) {
   return (
-    <h3>
-      <span>{children}</span>
+    <div>
+      <label>{children}</span>
       <select
         value={serviceValue}
         onChange={(e) => setServiceValue(+e.target.value)}
@@ -11,6 +11,6 @@ export default function Service({ serviceValue, setServiceValue, children }) {
         <option value="10">It was good (10%)</option>
         <option value="20">Absolutely amazing! (20%)</option>
       </select>
-    </h3>
+    </div>
   );
 }
