@@ -28,11 +28,13 @@ function App() {
         <FriendsService friendServ={friendServ} onFriendServ={setFriendServ} />
       </div>
       <div>
-        <Amount bill={bill} averageTip={averageTip} amount={amount} />
+        {amount ? (
+          <Amount bill={bill} averageTip={averageTip} amount={amount} />
+        ) : (
+          ""
+        )}
       </div>
-      <div>
-        <Reset onReset={reset} />
-      </div>
+      <div>{amount ? <Reset onReset={reset} /> : ""}</div>
     </div>
   );
 }
